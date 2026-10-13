@@ -1,0 +1,6 @@
+node_modules/
+# Fonts are fetched and checksum-verified by scripts/fonts.sh (run by setup.sh)
+fonts/*.ttf
+# Generated output
+*.pdf
+examples/*.html
