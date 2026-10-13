@@ -1,0 +1,99 @@
+{
+  "_note": "FICTIONAL example. Every person, company, handle and URL here is invented; example.com/.org/.net and *.example domains are reserved for documentation (RFC 2606).",
+  "subject": {"name": "Rowan Ellery Quill", "city": "Fictional Harbour, Exampleland"},
+  "meta": {"reportDate": "Jan 15, 2030, 10:00 AM PT", "sourcesChecked": "Web search, social platforms, company registry, Wayback Machine, podcast directories, news archives"},
+  "tiles": {
+    "accounts": {"value": 5, "extra": "+1 unconfirmed", "note": "Site, LinkedIn, X, GitHub, Medium", "state": "found"},
+    "domains": {"value": 2, "note": "Personal site + company site", "state": "found"},
+    "mentions": {"value": 6, "note": "3 press · 2 podcasts · 1 event", "state": "found"},
+    "filings": {"value": 1, "note": "Company registration (example registry)", "state": "found"},
+    "dataBrokers": {"value": 0, "note": "None surfaced; brokers not individually queried", "state": "warn"},
+    "breaches": {"value": "—", "note": "Not checked", "state": "warn"}
+  },
+  "exposure": {"level": "Moderate-High", "assessment": "A founder with a long public trail: press, podcasts and a company filing tie a work email and a business address to the name."},
+  "timeline": [
+    {"when": "2016", "event": "BSc, Example State University", "source": "Personal site", "url": "https://rowanquill.example/about"},
+    {"when": "2017–2020", "event": "Product analyst, Lantern Logistics (fictional)", "source": "LinkedIn", "url": "https://social.example/in/rowan-quill"},
+    {"when": "Mar 2021", "event": "Co-founds Harbourlight Labs (fictional)", "source": "Registry filing", "url": "https://registry.example.org/companies/HL-0001"},
+    {"when": "Nov 2022", "event": "Seed round covered by Example Business Daily", "source": "Press", "url": "https://news.example.com/2022/11/harbourlight-seed"},
+    {"when": "May 2023", "event": "Guest on The Example Founder podcast", "source": "Podcast", "url": "https://podcasts.example.net/founder/ep-42"},
+    {"when": "Sep 2024", "event": "Speaker, Example Tech Week", "source": "Event page", "url": "https://techweek.example.org/speakers"},
+    {"when": "2025", "event": "Named in Example 30 Under 30 list", "source": "Press", "url": "https://news.example.com/2025/30-under-30"}
+  ],
+  "map": {
+    "columns": ["Own profiles", "Linked from site", "Company", "Coverage"],
+    "nodes": [
+      {"id": "site", "label": "rowanquill.example", "col": 0, "own": true},
+      {"id": "ig", "label": "IG @rowan.q (possible)", "col": 0},
+      {"id": "ns", "label": "R. Quill (other city)", "col": 0},
+      {"id": "li", "label": "LinkedIn", "col": 1, "own": true},
+      {"id": "x", "label": "X @rowanquill_ex", "col": 1, "own": true},
+      {"id": "gh", "label": "GitHub @rquill-ex", "col": 1, "own": true},
+      {"id": "co", "label": "Harbourlight Labs", "col": 2},
+      {"id": "reg", "label": "Registry filing", "col": 2},
+      {"id": "p1", "label": "Example Business Daily", "col": 3},
+      {"id": "p2", "label": "Example Founder podcast", "col": 3},
+      {"id": "p3", "label": "Example Tech Week", "col": 3}
+    ],
+    "edges": [
+      {"from": "site", "to": "li", "kind": "confirmed"},
+      {"from": "site", "to": "x", "kind": "confirmed"},
+      {"from": "site", "to": "gh", "kind": "confirmed"},
+      {"from": "site", "to": "ig", "kind": "possible"},
+      {"from": "site", "to": "ns", "kind": "notthem"},
+      {"from": "li", "to": "co", "kind": "confirmed"},
+      {"from": "co", "to": "reg", "kind": "confirmed"},
+      {"from": "co", "to": "p1", "kind": "confirmed"},
+      {"from": "co", "to": "p2", "kind": "confirmed"},
+      {"from": "x", "to": "p3", "kind": "confirmed"}
+    ]
+  },
+  "dossier": [
+    {"identifier": "rowanquill.example", "type": "Domain", "status": "Confirmed", "evidence": "Registration + site bio", "evidenceUrl": "https://rowanquill.example/about"},
+    {"identifier": "@rowanquill_ex", "type": "X", "status": "Confirmed", "evidence": "Linked from personal site"},
+    {"identifier": "@rquill-ex", "type": "GitHub", "status": "Confirmed", "evidence": "Linked from personal site"},
+    {"identifier": "@rowan.q", "type": "Instagram", "status": "Possible", "evidence": "Same first name + city; no link back"},
+    {"identifier": {"label": "Work inbox", "withheld": "email"}, "type": "Email (work)", "status": "Confirmed", "evidence": "Read aloud on podcast ep. 42"},
+    {"identifier": {"label": "Office line", "withheld": "phone"}, "type": "Phone (office)", "status": "Confirmed", "evidence": "Company contact page"},
+    {"identifier": "R. Quill (other city)", "type": "Namesake", "status": "Not them", "evidence": "Different city and profession"}
+  ],
+  "findings": [
+    {"finding": "Personal site with bio and links", "type": "Site", "link": "https://rowanquill.example/about", "date": "Acc. Jan 15 2030", "sources": 2, "confidence": "High"},
+    {"finding": "LinkedIn with full job history", "type": "Account", "link": "https://social.example/in/rowan-quill", "date": "Acc. Jan 15 2030", "sources": 2, "confidence": "High"},
+    {"finding": "Company registration naming subject as director", "type": "Filing", "link": "https://registry.example.org/companies/HL-0001", "date": "2021-03-02", "sources": 1, "confidence": "Medium"},
+    {"finding": "Seed-round press coverage", "type": "Press", "link": "https://news.example.com/2022/11/harbourlight-seed", "date": "2022-11-08", "sources": 2, "confidence": "High"},
+    {"finding": "Podcast episode where work email is read out", "type": "Podcast", "link": "https://podcasts.example.net/founder/ep-42", "date": "2023-05-19", "sources": 1, "confidence": "Medium"},
+    {"finding": "Archived 2019 bio listing old employer", "type": "Archive", "link": "https://web.archive.org/web/2019/https://rowanquill.example/", "date": "2019-06-01", "sources": 1, "confidence": "Medium"},
+    {"finding": "Instagram account with matching first name", "type": "Account", "link": "https://instagram.example/rowan.q", "date": "Not reached", "sources": 0, "confidence": "Unverified"}
+  ],
+  "network": {
+    "colleagues": ["Avery Lindqvist-Example (co-founder, fictional)"],
+    "speakers": ["Host of The Example Founder (fictional)", "Example Tech Week panel (fictional)"],
+    "organisations": ["Harbourlight Labs", "Lantern Logistics", "Example State University"]
+  },
+  "exposures": [
+    {"title": "Work email spoken on a public podcast", "severity": "High", "description": "Episode 42 transcript; enables phishing that cites real company details.", "fix": "Ask the host to cut it from the transcript and show notes.", "fixLink": "https://podcasts.example.net/contact"},
+    {"title": "Director record with business address", "severity": "Medium", "description": "Public company registry entry.", "fix": "Use a registered-agent address where the registry allows it."},
+    {"title": "Full career history", "severity": "Medium", "description": "LinkedIn public view plus archived bios.", "fix": "Limit the public LinkedIn view.", "fixLink": "https://www.linkedin.com/public-profile/settings"},
+    {"title": "Handle reuse across platforms", "severity": "Low", "description": "Same stem on X, GitHub and site.", "fix": "Use a different handle for personal accounts."}
+  ],
+  "breaches": {"status": "not-checked", "text": "A work email is in scope, but no breach source was queried in this example run."},
+  "notes": [
+    "Paid registry extracts would show full officer history.",
+    "Instagram needs a permitted view to confirm or rule out.",
+    "People-search brokers were not individually queried."
+  ],
+  "checklist": [
+    "Get the podcast email removed",
+    "Switch registry address to a registered agent",
+    "Limit LinkedIn public view",
+    "Review Instagram privacy",
+    "Separate personal and work handles",
+    "Run a breach check on the work email"
+  ],
+  "gaps": {
+    "unreachable": "Instagram (login wall), paid registry extracts, breach sources.",
+    "possible": "Instagram @rowan.q — same first name and city, no link back.",
+    "ruledOut": "R. Quill in another city — different profession, no shared links."
+  }
+}
