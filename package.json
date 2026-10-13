@@ -1,0 +1,16 @@
+{
+  "name": "pdi-report-generator",
+  "version": "1.0.0",
+  "description": "Private Digital Investigator report generator: JSON findings to a Nuculair-styled HTML + PDF dossier.",
+  "license": "MIT",
+  "private": true,
+  "main": "render.js",
+  "bin": {"pdi-render": "render.js"},
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "test": "node --test test/",
+    "example": "node render.js examples/fictional-subject.json examples/fictional-subject.pdf"
+  },
+  "engines": {"node": ">=18"},
+  "dependencies": {"playwright-core": "^1.48.0"}
+}
